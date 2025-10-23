@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="style.css" />
+  <title>Princess Airah | Portfolio</title>
+
+<body>
+  
+    
+    <nav id="nav-menu">
+      <div class="logo">Princess Airah</div>
+      <div class="navlinkwrapper">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#Certifications">Certifications</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h1>Hi, I'm Princess Airah </h1>
+      <p>A cute student of Bestlink College of the Philippines joke!!!!!.</p>
+      <button onclick="scrollToContact()">Hire Me</button>
+    </div>
+    <img src="face1.png" alt="Princess Airah">
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Hi! I’m <strong>Princess Airah</strong>, but you can call me <strong>Cess</strong> or <strong>Irah</strong>.  
+      I’m 19 years old and I live in <strong>Camarin, Caloocan City</strong>.  
+      I love spending my free time dancing, watching K-Dramas, and scrolling through Facebook, Instagram, and TikTok.  
+      ‘cause honestly I get bored sometimes.  
+
+      I enjoy <strong>swimming</strong> and playing <strong>chess</strong>, but I also really like <strong>badminton</strong> and <strong>volleyball</strong>.  
+      I’m the kind of person who loves to have fun, learn new things, and make the most out of every day. 
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>My Skills</h2>
+    <div class="card-container">
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/919/919827.png" alt="HTML">
+        <h3>HTML & CSS</h3>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript">
+        <h3>JavaScript</h3>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968282.png" alt="Java">
+        <h3>Java</h3>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" alt="C++">
+        <h3>C++</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>Portfolio Website</h3>
+        <p>My personal responsive portfolio.</p>
+      </div>
+      <div class="card">
+        <h3>Ordering System</h3>
+        <p>Java + Database project for Ma'am gigi.</p>
+      </div>
+     
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Work Experience</h2>
+    <div class="experience-container">
+      <div class="experience-card">
+        <img src="tiktok.jpeg" alt="TikTok Shop">
+        <h3>Online Seller</h3>
+        <p><strong>TikTok Shop</strong></p>
+        <p>Handled product listing, customer interaction, and online sales. Learned how to communicate, market products, and manage orders effectively.</p>
+      </div>
+
+      <div class="experience-card">
+        <img src="immersion.jpg">
+        <h3>Work Immersion</h3>
+        <p><strong>Daet Company</strong></p>
+        <p>Gained hands-on experience in a professional setting, assisting in tasks and learning how real work environments operate.</p>
+      </div>
+    </div>
+  </section>
+  
+  <section id="testimonials">
+    <h2>Testimonials</h2>
+    <div class="testimonials-container">
+      <div class="testimonial">
+        <img src="v.jpg" alt="Person 1">
+        <p>"Princess is a talented and dedicated student!"</p>
+        <span>- V</span>
+      </div>
+      <div class="testimonial">
+        <img src="blythe.jpg" alt="Person 2">
+        <p>"She has great creativity and energy in her work."</p>
+        <span>- Ann</span>
+      </div>
+      <div class="testimonial">
+        <img src="yuri.jpg" alt="Person 3">
+        <p>"Her skills in web development are outstanding."</p>
+        <span>- Yuri</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>If you'd like to work together, feel free to reach out.</p>
+    <button onclick="openLogin()">Login to Contact</button>
+  </section>
+
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeLogin()">&times;</span>
+      <h2>Login</h2>
+      <input type="text" placeholder="Username" id="username">
+      <input type="password" placeholder="Password" id="password">
+      <button onclick="login()">Login</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Princess Airah Alano | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('nav-menu').classList.toggle('show');
+    }
+
+    function scrollToContact() {
+      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    const modal = document.getElementById('loginModal');
+
+    function openLogin() {
+      modal.style.display = 'flex';
+    }
+
+    function closeLogin() {
+      modal.style.display = 'none';
+    }
+
+    window.onclick = function(e) {
+      if (e.target == modal) closeLogin();
+    }
+
+    function login() {
+      const user = document.getElementById('username').value;
+      const pass = document.getElementById('password').value;
+
+      if (user === "admin" && pass === "1234") {
+        alert("Login successful!");
+        closeLogin();
+      } else {
+        alert("Invalid credentials. Try admin / 1234 ");
+      }
+    }
+  </script>
+</body>
+</html>
